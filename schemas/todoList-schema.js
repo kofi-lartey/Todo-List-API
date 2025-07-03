@@ -5,4 +5,5 @@ export const todoListSchema = Joi.object({
     description:Joi.string().required(),
     completion:Joi.boolean().optional(),
     dueDate:Joi.date().optional(),
+    user: Joi.string()
 });

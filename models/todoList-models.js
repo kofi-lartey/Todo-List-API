@@ -18,6 +18,11 @@ export const todoListmodel = new Schema({
     dueDate:{
         type: Date,
     },
+    user:{
+        type: Schema.Types.ObjectId,
+        ref:'User',
+        required: true
+    }
 },{timestamps:true})
 
 todoListmodel.plugin(normalize);
