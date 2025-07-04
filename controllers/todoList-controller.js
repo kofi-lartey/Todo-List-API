@@ -23,6 +23,7 @@ export const createList = async (req, res) => {
     }
 };
 
+// get all list with a limit of 10 lists per a page
 export const lists = async (req, res) => {
     try {
         const userID = req.user.id;
@@ -44,7 +45,7 @@ export const lists = async (req, res) => {
         if (allLists.length == 0) {
             return res.status(400).json({ message: 'You have no list' })
         };
-        
+
         return res.status(200).json({
             message: `These are all your List`,
             lists: allLists,
